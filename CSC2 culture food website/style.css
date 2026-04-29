@@ -91,3 +91,94 @@ nav a.active, nav a:hover {
     .food-card { flex-direction: column; }
     .food-image { flex: 0 0 auto; height: 180px; }
 }
+
+/* Initial state of the image */
+.food-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+    opacity: 0.9; /* Slight fade by default */
+}
+
+/* --- UPGRADED FOOD CARDS BECAUSE OTHERS WERE NOT GOOD ENOUGH --- */
+
+/* 1. The Container for the Food Cards */
+.food-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Increased gap for better breathing room */
+    padding: 20px;
+}
+
+/* 2. The Card for Each Food Item */
+.food-card {
+    display: flex;
+    background: white;
+    border-radius: 15px; /* Rounder corners for a better look */
+    overflow: hidden;
+    border-left: 8px solid #ce1126; /* Thicker accent line */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Softer, natural shadow */
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), 
+                box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* 3. Card Hover Effect */
+.food-card:hover {
+    transform: translateY(-8px); /* Lifts the card up */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15); /* Deepens shadow on hover */
+    cursor: pointer;
+}
+
+/* 4. Image Styling & Fade */
+.food-image {
+    flex: 0 0 300px;
+    height: 220px;
+    overflow: hidden;
+}
+
+.food-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9; /* Slight fade by default */
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Image zooms and brightens when the WHOLE card is hovered */
+.food-card:hover .food-image img {
+    opacity: 1;
+    transform: scale(1.1); /* Smooth zoom effect */
+}
+
+/* 5. Refined Text Spacing */
+.food-info {
+    padding: 25px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.food-info h3 {
+    margin: 0 0 10px 0;
+    color: #002b7f;
+    font-size: 1.6rem;
+    letter-spacing: -0.5px;
+}
+
+.food-info p {
+    color: #555;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* 6. Responsive Mobile View */
+@media (max-width: 768px) {
+    .food-card {
+        flex-direction: column;
+    }
+    .food-image {
+        flex: 0 0 auto;
+        height: 200px;
+    }
+}
