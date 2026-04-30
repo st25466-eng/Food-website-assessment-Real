@@ -1,13 +1,14 @@
-/* General Page Styling */
+/* General page styling for all pages */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     line-height: 1.6;
-    background: url('https://unsplash.com') no-repeat center center fixed;
+    background: url('https://wallpaperaccess.com/full/294484.jpg') no-repeat center center fixed;
     background-size: cover;
+    color: white;
 }
 
-/* Flag-Themed Navbar */
+/* Samoan flag themed navbar (all off youtube thanks coders)*/
 nav {
     background-color: #ce1126; /* Samoa Red */
     border-bottom: 5px solid #002b7f; /* Samoa Blue */
@@ -39,13 +40,13 @@ nav a.active, nav a:hover {
 .content {
     max-width: 1000px;
     margin: 40px auto;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 0, 0, 0.95);
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
-/* Horizontal Food Cards */
+/* Horizontal Food Cards (11 minute video just for this bro)*/
 .food-container {
     display: flex;
     flex-direction: column;
@@ -92,14 +93,6 @@ nav a.active, nav a:hover {
     .food-image { flex: 0 0 auto; height: 180px; }
 }
 
-/* Initial state of the image */
-.food-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
-    opacity: 0.9; /* Slight fade by default */
-}
 
 /* --- UPGRADED FOOD CARDS BECAUSE OTHERS WERE NOT GOOD ENOUGH --- */
 
@@ -172,7 +165,7 @@ nav a.active, nav a:hover {
     margin: 0;
 }
 
-/* 6. Responsive Mobile View */
+/* 6. Responsive mobile view I think for the shadow stuff? */
 @media (max-width: 768px) {
     .food-card {
         flex-direction: column;
@@ -181,4 +174,11 @@ nav a.active, nav a:hover {
         flex: 0 0 auto;
         height: 200px;
     }
+    /* Change all text to white by default */
+/* Removed duplicate body selector and merged color: white; into the main body block */
+
+/* Ensure your main content box text remains readable (e.g., black) */
+.content-box, #main-container {
+  color: black;
+}
 }
